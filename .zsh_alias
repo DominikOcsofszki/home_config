@@ -1,0 +1,17 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+alias confs='tmux display-popup -E nvim $(ls -a | fzf)'
+alias confs='tmux display-popup -E nvim $(ls -a | fzf)'
+alias confx='tmux display-popup -E nvim $((find . 2> /dev/null) | fzf)'
