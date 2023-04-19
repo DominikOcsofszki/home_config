@@ -2,15 +2,21 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 export LANG=en_US.UTF-8
+# export HOMECONFIG='/Users/dominikocsofszki/.config/home_config'
+alias b="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
+alias fh='nvim  $(ls -a | b)'
+#alias fh='nvim  $(ls -a | fzf)'
+alias fhh='nvim  ~/$(ls -a ~ | b)'
+alias f='nvim  $(ls  ~ | b)'
+alias n='nvim $(find . | b)'
+eval "$(lua /Users/dominikocsofszki/Dev/git_downloads/z.lua/z.lua --init zsh)"
+alias nv='nvim $(fzf)'
+alias cpdd='cp ~/Downloads/"$(ls ~/Downloads/| b)" ~/Uni/univim/downloads'
+alias sourceall=' source $HOME_CONFIG/.zprofile; source  $HOME_CONFIG/.zshrc '
+#$HOME_CONFIG.zprofile;
 
-alias docker=podman
-alias p=podman
-alias pk="podman kill"
-alias pps="podman ps"
-alias anhdom="docker exec -it anhdom /bin/bash"
-#setopt correct
-#alias runus="zsh /Users/dominikocsofszki/Dev/FlutterDev/DA-forum/run-our-website.sh"
-#alias cdmms='cd myserverpod/myserverpod_server'
-#alias sss='cd /Users/dominikocsofszki/Dev/FlutterDev/DA-forum/'
-#alias sps='cd /Users/dominikocsofszki/Dev/FlutterDev/DA-forum/myserverpod/myserverpod_server'
-#alias spf='cd /Users/dominikocsofszki/Dev/FlutterDev/DA-forum/myserverpod/myserverpod_flutter'
+
+
+#EXPORTS
+export FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --preview 'bat --color=always --style=header,grid  {}'"
+# export FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --preview 'bat --color=always --style=header,grid --line-range :300 {}'"
