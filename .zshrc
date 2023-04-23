@@ -9,7 +9,8 @@ export HOME=/Users/dominikocsofszki
 export PATH=$HOME/Dev/FlutterDev/flutter/bin:$HOME/.pub-cach/bin:$PATH
 export PATH=~/Dev/FlutterDev/flutter/bin:~/.pub-cach/bin:$PATH
 export HOME_CONFIG=~/.config/home_config/
-
+export PATH=/Users/dominikocsofszki/Uni/univim/bin/:$PATH
+export PAGER="col -b|nvim -R -c 'set ft=man' - "
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -86,7 +87,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-plugins=( history web-search zsh-autosuggestions my-plugin fzf-tab)
+plugins=( history  zsh-autosuggestions  fzf-tab zsh-syntax-highlighting)
 #zsh-syntax-highlighting
 source $ZSH/oh-my-zsh.sh
 
@@ -123,3 +124,6 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
