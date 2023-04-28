@@ -3,6 +3,11 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 export LANG=en_US.UTF-8
 eval "$(lua /Users/dominikocsofszki/Dev/git_downloads/z.lua/z.lua --init zsh)"
+
+export MY=~/.cache/MY/my_cache.mycache
+
+
+
 alias cpdd='cp ~/Downloads/"$(ls ~/Downloads/| fzf)" ~/Uni/univim/downloads'
 alias cpD='cp "$(_fcpD)"  ~/Uni/univim/downloads'
 alias _fcpD="fd .pdf$ ~/Downloads/ | fzf  --preview-window 'right:60%' --preview ' pdftotext -layout -f 1  {} -'"
@@ -62,4 +67,66 @@ alias browse="fd | fzf --preview 'bat {}' --bind '0:preview:open {}' --bind 'ent
 alias fzfP="fzf --margin 5% --padding 5% --border --preview 'bat {}' --color bg:#222222,preview-bg:#333333"
 alias fzfP="fzf --margin 1% --padding 5% --border --preview 'bat {}' --color bg:#222222,preview-bg:#333333"
 
-alias x="ls -a |fzf -q '.sh$' --height=~10% --border=bold --preview 'cat {}' --bind '?:preview(ls {})' --border-label='              PRESS: ? = ls into folder     ' --bind 'enter:execute( {})'"
+alias xx="ls -a |fzf -q '.sh$' --height=~5% --border=bold --preview 'cat {}' --bind '?:preview(ls {})' --border-label='  ctrl-c:quit    ' --bind '~:execute(zsh {})'"
+alias X=' echo "enter for execution"; zsh $(xx); echo "executed"'
+alias sA="alias | nvim -R  -"
+alias Ali="alias | fzf | col  | gcut -s -f 2- -d '=' | sd ' ' ''|xargs echo"
+alias Ali="alias | fzf  | gcut  -f 2- -d '=' | cat  " 
+alias fAli="Ali | gcut -c 1- | rev"
+
+
+alias showdownloads='ls ~/Downloads/| fzf --preview "cat ~/Downloads/{}"'
+
+alias ali="Ali | xargs | zsh "
+# alias _my="fd '\.my$' ~"
+
+myupdate () {
+        echo 'updating /.cache/MY/my_cache.mycache'
+        MY=~/.cache/MY/my_cache.mycache
+        echo "\$MY: $MY"
+        echo "exporting \$MY"
+        fd '\.my$' ~ > $MY
+        export MY
+        echo "found files:"
+        cat $MY
+        date +%s > $1
+        myopen
+}
+
+myopen () {
+    cat $MY | xargs cat| fzf | xargs open
+}
+my () {
+maxDif=1000
+lastupdated=~/.cache/MY/lastupdated.mycache
+last=$(cat $lastupdated)
+todate=$(date +%s)
+dif=$(($todate - $last))
+echo " time since last update: $dif / $maxDif"
+if [ $dif -ge $maxDif ];
+then
+    echo 'updating:'
+    myupdate $lastupdated
+else
+    myopen
+fi
+}
+
+linksFrom () {
+cat $1 | grep -o 'href="[^"]*"' | grep -o '"[^"]*"' | grep http | gcut -d '"' -f 2
+}
+
+allLinksFrom () {
+
+for  arg in $* 
+do
+    # print $arg
+    linksFrom $arg
+done
+
+}
+
+
+
+
+

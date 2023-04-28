@@ -14,8 +14,11 @@ export PAGER="col -b|nvim -R -c 'set ft=man' - "
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-#set clipboard=unnamed
 
+###ADDING ZPROFILE TO FUNCTIONS!
+export FPATH=~/.zprofile:$FPATH
+#set clipboard=unnamed
+#echo $FPATH
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -121,6 +124,7 @@ source $ZSH/oh-my-zsh.sh
 # source $HOME_CONFIG/.zsh_alias
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+source $HOME_CONFIG/.zsh_source
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

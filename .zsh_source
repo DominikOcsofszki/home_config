@@ -1,0 +1,3 @@
+
+source $HOME_CONFIG/.zprofile
+#source $HOME_CONFIG/.zsh_myscript
