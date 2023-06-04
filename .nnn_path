@@ -1,0 +1,5 @@
+export NNN_PLUG='p:preview-tui;t:preview-tabbed;o:fzopen'
+export NNN_FIFO='/tmp/nnn.fifo'
+export VISUAL='nvim' 
+export EDITOR='nvim' 
+export NNN_OPENER=nuke

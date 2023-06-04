@@ -97,12 +97,12 @@ myopen () {
     cat $MY | xargs cat| fzf | xargs open
 }
 my () {
-maxDif=1000
+    maxDif=$((3*60*60))
 lastupdated=~/.cache/MY/lastupdated.mycache
 last=$(cat $lastupdated)
 todate=$(date +%s)
 dif=$(($todate - $last))
-echo " time since last update: $dif / $maxDif"
+echo " time since last update: $dif / $maxDif to update now, call: myupdate"
 if [ $dif -ge $maxDif ];
 then
     echo 'updating:'
@@ -126,7 +126,12 @@ done
 
 }
 
+openAllEntries () {
+
+# cat DELETEME | while IFS= read -r filename; do open "$filename"; done
+cat $1 | while IFS= read -r filename; do open "$filename"; done
+}
 
 
 
-
+alias  cphere='cp ~/Downloads/"$(ls ~/Downloads/| fzf)" $(pwd)'  

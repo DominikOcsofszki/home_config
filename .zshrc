@@ -9,7 +9,8 @@ export HOME=/Users/dominikocsofszki
 export PATH=$HOME/Dev/FlutterDev/flutter/bin:$HOME/.pub-cach/bin:$PATH
 export PATH=~/Dev/FlutterDev/flutter/bin:~/.pub-cach/bin:$PATH
 export HOME_CONFIG=~/.config/home_config/
-export PATH=/Users/dominikocsofszki/Uni/univim/bin/:$PATH
+export PATH=/Users/dominikocsofszki/Dev/FlutterDev/flutter/bin:$PATH
+export PATH=/Users/dominikocsofszki/Library/Python/3.11/bin:$PATH
 export PAGER="col -b|nvim -R -c 'set ft=man' - "
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"

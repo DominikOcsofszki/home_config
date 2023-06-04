@@ -1,3 +1,6 @@
 
 source $HOME_CONFIG/.zprofile
 #source $HOME_CONFIG/.zsh_myscript
+source $HOME_CONFIG/.nnn_path
+
+source $HOME_CONFIG/.zsh_functions
