@@ -4,20 +4,22 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 export LANG=en_US.UTF-8
 eval "$(lua /Users/dominikocsofszki/Dev/git_downloads/z.lua/z.lua --init zsh)"
 
-export MY=~/.cache/MY/my_cache.mycache
+export MY=$HOME/.cache/MY/my_cache.mycache
 
 
 
-alias cpdd='cp ~/Downloads/"$(ls ~/Downloads/| fzf)" ~/Uni/univim/downloads'
-alias cpD='cp "$(_fcpD)"  ~/Uni/univim/downloads'
-alias _fcpD="fd .pdf$ ~/Downloads/ | fzf  --preview-window 'right:60%' --preview ' pdftotext -layout -f 1  {} -'"
+
+
+alias cpdd='cp $HOME/Downloads/"$(ls $HOME/Downloads/| fzf)" $HOME/Uni/univim/downloads'
+alias cpD='cp "$(_fcpD)"  $HOME/Uni/univim/downloads'
+alias _fcpD="fd .pdf$ $HOME/Downloads/ | fzf  --preview-window 'right:60%' --preview ' pdftotext -layout -f 1  {} -'"
 
 #$HOMh_CONFIG.zprofile;
-# alias fhh='nvim ~/$(ls -a ~ | fzf -q "zprofile | conf | zsh ")'
-alias fH='nvim ~/.config/home_config/$(ls -a ~/.config/home_config/ | fzf --height=50% --reverse )'
-alias fh='nvim ~/.config/home_config/$(ls -a ~/.config/home_config/ | fzf --height=50% --reverse --preview "bat {}")'
-# alias CC="nvim ~/.config/home_config/$(fd -H . ~/.config/home_config/ | fzf --preview-window 'right:60%' --preview 'cat ')"
-#alias fH="nvim ~/$(ls -a ~ | fzf -q \" zp | conf | zsh \")"
+# alias fhh='nvim $HOME/$(ls -a $HOME | fzf -q "zprofile | conf | zsh ")'
+alias fH='nvim $HOME/.config/home_config/$(ls -a $HOME/.config/home_config/ | fzf --height=50% --reverse )'
+alias fh='nvim $HOME/.config/home_config/$(ls -a $HOME/.config/home_config/ | fzf --height=50% --reverse --preview "bat {}")'
+# alias CC="nvim $HOME/.config/home_config/$(fd -H . $HOME/.config/home_config/ | fzf --preview-window 'right:60%' --preview 'cat ')"
+#alias fH="nvim $HOME/$(ls -a $HOME | fzf -q \" zp | conf | zsh \")"
 
 alias S=' source $HOME_CONFIG/.zprofile; source  $HOME_CONFIG/.zshrc source  $HOME_CONFIG/.zsh_myscript'
 #EXPORTS
@@ -44,7 +46,7 @@ p () {
 
 
 alias tmuxA="tmux attach -t \$(tmux ls | fzf | cat | gcut -s -f 1 -d $':')"
-alias searchPDF="rg . ~/Uni/univim/downloads/.pdftext/  | fzf | gcut -s -f 1 -d $':' | sd ' ' '\\ ' | xargs open"
+alias searchPDF="rg . $HOME/Uni/univim/downloads/.pdftext/  | fzf | gcut -s -f 1 -d $':' | sd ' ' '\\ ' | xargs open"
 
 
 go () {
@@ -75,17 +77,17 @@ alias Ali="alias | fzf  | gcut  -f 2- -d '=' | cat  "
 alias fAli="Ali | gcut -c 1- | rev"
 
 
-alias showdownloads='ls ~/Downloads/| fzf --preview "cat ~/Downloads/{}"'
+alias showdownloads='ls $HOME/Downloads/| fzf --preview "cat $HOME/Downloads/{}"'
 
 alias ali="Ali | xargs | zsh "
-# alias _my="fd '\.my$' ~"
+# alias _my="fd '\.my$' $HOME"
 
 myupdate () {
         echo 'updating /.cache/MY/my_cache.mycache'
-        MY=~/.cache/MY/my_cache.mycache
+        MY=$HOME/.cache/MY/my_cache.mycache
         echo "\$MY: $MY"
         echo "exporting \$MY"
-        fd '\.my$' ~ > $MY
+        fd '\.my$' $HOME > $MY
         export MY
         echo "found files:"
         cat $MY
@@ -98,7 +100,7 @@ myopen () {
 }
 my () {
     maxDif=$((3*60*60))
-lastupdated=~/.cache/MY/lastupdated.mycache
+lastupdated=$HOME/.cache/MY/lastupdated.mycache
 last=$(cat $lastupdated)
 todate=$(date +%s)
 dif=$(($todate - $last))
@@ -134,4 +136,4 @@ cat $1 | while IFS= read -r filename; do open "$filename"; done
 
 
 
-alias  cphere='cp ~/Downloads/"$(ls ~/Downloads/| fzf)" $(pwd)'  
+alias  cphere='cp $HOME/Downloads/"$(ls $HOME/Downloads/| fzf)" $(pwd)'  

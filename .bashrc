@@ -1,2 +1,2 @@
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[ -f $HOME/.fzf.bash ] && source $HOME/.fzf.bash
 alias ls='echo "from bashrc"'

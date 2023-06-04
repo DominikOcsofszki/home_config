@@ -1,4 +1,4 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Enable Powerlevel10k instant prompt. Should stay close to the top of $HOME/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -7,17 +7,17 @@ fi
 
 export HOME=/Users/dominikocsofszki
 export PATH=$HOME/Dev/FlutterDev/flutter/bin:$HOME/.pub-cach/bin:$PATH
-export PATH=~/Dev/FlutterDev/flutter/bin:~/.pub-cach/bin:$PATH
-export HOME_CONFIG=~/.config/home_config/
-export PATH=/Users/dominikocsofszki/Dev/FlutterDev/flutter/bin:$PATH
-export PATH=/Users/dominikocsofszki/Library/Python/3.11/bin:$PATH
+export PATH=$HOME/Dev/FlutterDev/flutter/bin:$HOME/.pub-cach/bin:$PATH
+export HOME_CONFIG=$HOME/.config/home_config/
+export PATH=$HOME/Dev/FlutterDev/flutter/bin:$PATH
+export PATH=$HOME/Library/Python/3.11/bin:$PATH
 export PAGER="col -b|nvim -R -c 'set ft=man' - "
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
 
 ###ADDING ZPROFILE TO FUNCTIONS!
-export FPATH=~/.zprofile:$FPATH
+export FPATH=$HOME/.zprofile:$FPATH
 #set clipboard=unnamed
 #echo $FPATH
 
@@ -118,17 +118,17 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# alias zshconfig="mate $HOME/.zshrc"
+# alias ohmyzsh="mate $HOME/.oh-my-zsh"
 # Sourcing the CustomZSH
  #source $ZSH_CUSTOM/zsh_alias.conf
 # source $HOME_CONFIG/.zsh_alias
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+# To customize prompt, run `p10k configure` or edit $HOME/.p10k.zsh.
 source $HOME_CONFIG/.zsh_source
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[[ ! -f $HOME/.p10k.zsh ]] || source $HOME/.p10k.zsh
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 

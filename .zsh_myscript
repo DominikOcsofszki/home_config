@@ -2,7 +2,7 @@
 
 
 
-alias pdfintotxtunivim="fd pdf ~/Uni/univim/downloads --extension pdf -x pdftotext {} ~/Uni/univim/downloads/.pdftext/{/.}.txt"
+alias pdfintotxtunivim="fd pdf $HOME/Uni/univim/downloads --extension pdf -x pdftotext {} $HOME/Uni/univim/downloads/.pdftext/{/.}.txt"
 alias fzfpdf="fd .pdf$ . | fzf --layout=reverse-list --multi --preview-window 'right:60%' --preview ' pdftotext -layout -f 1  {} -'"
 
 alias fzftxt="fd .txt$ . | fzf --layout=reverse-list  --preview-window 'right:60%' --preview 'bat --color=always --style=header,grid  {}'"
