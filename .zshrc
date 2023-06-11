@@ -130,5 +130,6 @@ source $HOME_CONFIG/.zsh_source
 
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+# Load Angular CLI autocompletion.
+source <(ng completion script)

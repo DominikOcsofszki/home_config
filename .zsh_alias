@@ -1,0 +1,3 @@
+alias n=nvim
+alias vim=nvim
+alias gitall="git add . && git commit -m 'gitall' && git push "
