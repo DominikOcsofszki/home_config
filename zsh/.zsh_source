@@ -1,0 +1,7 @@
+
+source $ZSH_CONFIG/.zprofile
+source $ZSH_CONFIG/.nnn_path
+
+source $ZSH_CONFIG/.zsh_functions
+source $ZSH_CONFIG/.zsh_alias
+
