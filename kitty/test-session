@@ -1,0 +1,9 @@
+
+launch /opt/homebrew/bin/nvim
+launch zsh
+launch /opt/homebrew/bin/nvim
+
+#new_tab test
+cd ~/.config
+launch /opt/homebrew/bin/nvim
+## launch zsh -c nvim
