@@ -7,6 +7,13 @@ gitA () {
 	git add . && git commit -m '$1' && git push
 }
 
+nz () {
+	n $(cat ~/.tmp/items-nvim.txt | fzf)
+}
+# ToDo: Checking if the item is already inside the file. duplicates.
+ns () {
+echo $1 >> ~/.tmp/items-nvim.txt
+}
 
 # cat DELETEME | while IFS= read -r filename; do open "$filename"; done
 # cat $1 | while IFS= read -r filename; do open "$filename"; done
