@@ -3,3 +3,11 @@ alias nn="nvim $HOME_CONFIG/nvim/lua/"
 
 alias vim=nvim
 alias gitall="git add . && git commit -m 'gitall' && git push "
+
+
+
+
+
+
+
+source $ZSH_CONFIG/.zsh_to_lazy_alias

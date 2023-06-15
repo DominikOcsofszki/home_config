@@ -17,3 +17,13 @@ echo $1 >> ~/.tmp/items-nvim.txt
 
 # cat DELETEME | while IFS= read -r filename; do open "$filename"; done
 # cat $1 | while IFS= read -r filename; do open "$filename"; done
+#
+
+alias web=/Users/dominikocsofszki/.local/bin/awrit
+
+google () {
+    # open "http://google.com/search?q=$1+$2+$3"
+    web "http://google.com/search?q=$(echo \"$@\" | sd ' ' '+' | sd '"' '')"
+    # open "http://google.com/search?q=${search}"
+}
+
