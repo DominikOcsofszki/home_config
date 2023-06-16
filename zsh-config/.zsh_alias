@@ -2,7 +2,7 @@ alias n=nvim
 alias nn="nvim $HOME_CONFIG/nvim/lua/"
 
 alias vim=nvim
-alias gitall="git add . && git commit -m 'gitall' && git push "
+# alias gitall="git add . && git commit -m 'gitall' && git push "
 
 
 
