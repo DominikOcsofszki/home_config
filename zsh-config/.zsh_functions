@@ -1,18 +1,18 @@
 # zsh -c "nvim oneOfTheseDeactivatedFinderForeground.txt"
 openV() {
-		zsh -c "nvim $1"
+    zsh -c "nvim $1"
 }
 
 gitA () {
-	git add . && git commit -m '$1' && git push
+    git add . && git commit -m '$1' && git push
 }
 
 nz () {
-	n $(cat ~/.tmp/items-nvim.txt | fzf)
+    n $(cat ~/.tmp/items-nvim.txt | fzf)
 }
 # ToDo: Checking if the item is already inside the file. duplicates.
 ns () {
-echo $1 >> ~/.tmp/items-nvim.txt
+    echo $1 >> ~/.tmp/items-nvim.txt
 }
 
 # cat DELETEME | while IFS= read -r filename; do open "$filename"; done
@@ -28,5 +28,39 @@ google () {
 deepl () {
     web "https://www.deepl.com/translator#de/en/$(echo \"$@\" | sd ' ' ' ' | sd '"' '')"
     # web "https://www.deepl.com/translator#de/en/$(echo \"$@\" | sd ' ' '+' | sd '"' '')"
+}
+
+## Saving files with .my ending => loading all entries of each .my file on the system.
+## Using it for important lecture links
+myupdate () {
+    echo 'updating /.cache/MY/my_cache.mycache'
+    MY=$HOME/.cache/MY/my_cache.mycache
+    echo "\$MY: $MY"
+    echo "exporting \$MY"
+    fd '\.my$' $HOME > $MY
+    export MY
+    echo "found files:"
+    cat $MY
+    date +%s > $1
+    myopen
+}
+
+myopen () {
+    cat $MY | xargs cat| fzf | xargs open
+}
+my () {
+    maxDif=$((3*60*60))
+    lastupdated=$HOME/.cache/MY/lastupdated.mycache
+    last=$(cat $lastupdated)
+    todate=$(date +%s)
+    dif=$(($todate - $last))
+    echo " time since last update: $dif / $maxDif to update now, call: myupdate"
+    if [ $dif -ge $maxDif ];
+    then
+	echo 'updating:'
+	myupdate $lastupdated
+    else
+	myopen
+    fi
 }
 
