@@ -3,7 +3,7 @@ alias nn="nvim $HOME_CONFIG/nvim/lua/"
 
 alias vim=nvim
 # alias gitall="git add . && git commit -m 'gitall' && git push "
-
+alias skima=/Applications/Skim/Skim.app/Contents/MacOS/Skim 
 
 
 

@@ -64,3 +64,21 @@ my () {
     fi
 }
 
+# alias pdfsearch="rg . $PWD  | fzf | gcut -s -f 1 -d $':' | sd ' ' '\\ ' | xargs open"
+pdfsearchi () {
+rg $1 $PWD  | fzf | gcut -s -f 1 -d $':' | sd ' ' '\\ ' | xargs nvim
+}
+# alias pdfsearch="rg . $HOME/Uni/univim/downloads/.pdftext/  | fzf | gcut -s -f 1 -d $':' | sd ' ' '\\ ' | xargs open"
+
+
+
+
+## NOT WORKING YET, should open file on proper line
+__pdfsearchn () {
+rg $1 $PWD --column | fzf | gcut -s -f 1- -d $':' | sd ' ' '\\ ' | xargs pdfopenintonvim {}
+}
+
+__pdfopenintonvim () {
+   echo \"$@\" 
+}
+

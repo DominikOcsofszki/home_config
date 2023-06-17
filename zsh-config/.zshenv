@@ -10,3 +10,4 @@ source $ZSH_CONFIG/.zsh_functions
 source $ZSH_CONFIG/.zsh_alias
 
 export PATH=/Library/Frameworks/Python.framework/Versions/3.11/bin/python3:$PATH
+alias cpc=pbcopy
