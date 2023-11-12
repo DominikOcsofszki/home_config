@@ -2,7 +2,7 @@
 #
 #
 
-export HOME=/Users/$(echo $USER)  
+# export HOME=/Users/$(echo $USER)  
 export XDG_CONFIG_HOME=$HOME/.config
 export ZSH_CONFIG=$XDG_CONFIG_HOME/home_config/zsh-config
 
