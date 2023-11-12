@@ -7,7 +7,7 @@ gitA () {
     git add . && git commit -m "$1" && git push
 }
 
-alias web=/Users/dominikocsofszki/.local/bin/awrit
+alias web=$HOME/.local/bin/awrit
 
 google () {
     web "http://google.com/search?q=$(echo \"$@\" | sd ' ' '+' | sd '"' '')"

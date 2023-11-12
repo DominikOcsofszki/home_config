@@ -36,7 +36,7 @@ openAllEntries () {
 # alias searchPDF="rg . $HOME/Uni/univim/downloads/.pdftext/  | fzf | gcut -s -f 1 -d $':' | sd ' ' '\\ ' | xargs open"
 # alias ali="Ali | xargs | zsh "
 # alias findFiles="fd --type file  |  fzf --margin 5% --padding 5% --border --preview 'bat {}' --color bg:#222222,preview-bg:#333333"
-# alias findA="fd --type file  |  fzf --margin 5% --padding 5% --border --preview 'bat {}' --color bg:#222222,preview-bg:#333333 --bind 'S:preview:cat {} | /Users/dominikocsofszki/Uni/univim/bin/imgcat.sh' --bind 'Q:preview: cat {} |  /Users/dominikocsofszki/Uni/univim/bin/imgcat.sh | cat'"
+# alias findA="fd --type file  |  fzf --margin 5% --padding 5% --border --preview 'bat {}' --color bg:#222222,preview-bg:#333333 --bind 'S:preview:cat {} | $HOME/Uni/univim/bin/imgcat.sh' --bind 'Q:preview: cat {} |  $HOME/Uni/univim/bin/imgcat.sh | cat'"
 # alias browse="fd | fzf --preview 'bat {}' --bind '0:preview:open {}' --bind 'enter:execute(nvim {})'"
 # alias xx="ls -a |fzf -q '.sh$' --height=~5% --border=bold --preview 'cat {}' --bind '?:preview(ls {})' --border-label='  ctrl-c:quit    ' --bind '~:execute(zsh {})'"
 # alias X=' echo "enter for execution"; zsh $(xx); echo "executed"'
