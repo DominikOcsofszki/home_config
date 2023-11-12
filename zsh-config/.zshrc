@@ -21,8 +21,7 @@ export PATH=$HOME/.npm-global/bin:/opt/homebrew/opt/openjdk/bin:$HOME/Dev/Instal
 export M2_HOME=/opt/homebrew/Cellar/maven
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
-# source $ZSH_CONFIG/zsh_plugins/source_plugins
-
+source $ZSH_CONFIG/zsh_source_all
 # source zsh_plugins/source_plugins
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

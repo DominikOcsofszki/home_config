@@ -1,4 +1,3 @@
-source $ZSH_CONFIG/zsh_plugins/source_plugins
 
 source $ZSH_CONFIG/.zprofile
 source $ZSH_CONFIG/.zsh_functions
@@ -7,4 +6,5 @@ source $ZSH_CONFIG/.zsh_alias_git
 
 source $ZSH_CONFIG/.zsh_alias2
 source $ZSH_CONFIG/.zsh_alias_uni
-
+source $ZSH_CONFIG/.zsh_lazy
+source $ZSH_CONFIG/source_plugins

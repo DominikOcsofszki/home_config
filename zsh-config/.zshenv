@@ -8,10 +8,10 @@ export ZSH_CONFIG=$HOME_CONFIG/zsh-config
 export XDG_CONFIG_HOME=$HOME/.config
 
 
-source $ZSH_CONFIG/.zprofile
-source $ZSH_CONFIG/.zsh_functions
-source $ZSH_CONFIG/.zsh_alias
-source $ZSH_CONFIG/.zsh_alias_git
+# source $ZSH_CONFIG/.zprofile
+# source $ZSH_CONFIG/.zsh_functions
+# source $ZSH_CONFIG/.zsh_alias
+# source $ZSH_CONFIG/.zsh_alias_git
 
 export PAGER="col -b|nvim -R -c 'set ft=man' - "
 # echo ">>>> ending, sourcing ~/.zshenv"
