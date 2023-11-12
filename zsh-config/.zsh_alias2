@@ -17,3 +17,5 @@ alias fAli="Ali | gcut -c 1- | rev"
 alias showdownloads='ls $HOME/Downloads/| fzf --preview "cat $HOME/Downloads/{}"'
 alias  cphere='cp $HOME/Downloads/"$(ls $HOME/Downloads/| fzf)" $(pwd)'  
 alias docker-start-colima='colima start'
+alias h='history'
+
