@@ -1,0 +1,18 @@
+
+
+
+watchfile(){
+		ADDRTMP=$HOME/TMP/script/tmp_check_file.txt
+				LAST=$(cat $ADDRTMP)
+				CURRENT=$(ls -ltr | head -n 2 | tail -n 1 )
+				echo '----'
+				echo $LAST
+				echo $CURRENT
+				echo '----'
+				if [ "$LAST" = "$CURRENT" ]; then
+						echo "Strings are equal."
+				else
+						echo "Strings are not equal."
+						echo $CURRENT >> $ADDRTMP
+								fi
+}

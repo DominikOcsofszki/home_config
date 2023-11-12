@@ -1,0 +1,10 @@
+alias mvnNewApp="mvn archetype:generate -DarchetypeArtifactId=maven-archetype-quickstart -DgroupId=task -DinteractiveMode=false -DartifactId=app"
+alias umlp="~/.npm-global/bin/water-uml live --live-port 8989"
+alias uml="~/.npm-global/bin/water-uml export"
+
+alias startMongo="brew services start mongodb/brew/mongodb-community"
+alias stopMongo="brew services stop mongodb/brew/mongodb-community"
+alias webProjekt="cd /Users/dominikocsofszki/Downloads/germany/code/WebEng/Projekt"
+
+alias jirash='cd "/Users/dominikocsofszki/Library/Mobile Documents/iCloud~md~obsidian/Documents/Uni/SE2/jira/sh"'
+alias intelij='open -na "IntelliJ IDEA.app"'

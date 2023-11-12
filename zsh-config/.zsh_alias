@@ -1,13 +1,27 @@
-alias n=nvim
-alias nn="nvim $HOME_CONFIG/nvim/lua/"
+alias n='nvim'
+alias N='nvim .'
+alias nn="nvim $XDG_CONFIG_HOME/nvim/"
+alias nk="nvim $HOME_CONFIG/kitty/"
+alias nc="nvim $HOME_CONFIG/zsh-config/"
 
 alias vim=nvim
-# alias gitall="git add . && git commit -m 'gitall' && git push "
 alias skima=/Applications/Skim/Skim.app/Contents/MacOS/Skim 
+alias serv="/Users/dominikocsofszki/.npm-global/bin/live-server --port=8989"
+alias umlp="~/.npm-global/bin/water-uml live --live-port 8989"
+alias uml="~/.npm-global/bin/water-uml export"
+alias cloud="/Users/dominikocsofszki/Library/Mobile\ Documents/com~apple~CloudDocs/"
+# alias cloud='"/Users/dominikocsofszki/Library/Mobile Documents/com~apple~CloudDocs/"'
+alias startMongo="brew services start mongodb/brew/mongodb-community"
+alias stopMongo="brew services stop mongodb/brew/mongodb-community"
+alias webProjekt="cd /Users/dominikocsofszki/Downloads/germany/code/WebEng/Projekt"
 
+alias obsidian="'/Users/dominikocsofszki/Library/Mobile Documents/iCloud~md~obsidian/Documents/Uni/'"
+alias uml_lua="source /Users/dominikocsofszki/.config/home_config/nvim/lua/settings/uml.lua"
 
+source $ZSH_CONFIG/.zsh_alias2
+source $ZSH_CONFIG/.zsh_alias_uni
 
-
-
-
-source $ZSH_CONFIG/.zsh_to_lazy_alias
+alias pn="NVIM_APPNAME=nvim_styles/\$(ls \$XDG_CONFIG_HOME/nvim_styles/ | fzf) nvim"
+alias mn="NVIM_APPNAME=nvim_styles/nvim_mine nvim"
+alias "m"="NVIM_APPNAME=nvim_styles/nvim_mine nvim "
+alias mc="m /Users/dominikocsofszki/.config/nvim_styles/nvim_mine" 

@@ -4,12 +4,3 @@ export VISUAL='nvim'
 export EDITOR='nvim' 
 export NNN_OPENER=nuke
 
-
-
-
-
-
-
-
-# Run kitty with prefiew mode
-alias Kitty="kitty -o allow_remote_control=yes --listen-on unix:/tmp/mykitty"

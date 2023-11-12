@@ -4,20 +4,8 @@ openV() {
 }
 
 gitA () {
-    git add . && git commit -m '$1' && git push
+    git add . && git commit -m "$1" && git push
 }
-
-nz () {
-    n $(cat ~/.tmp/items-nvim.txt | fzf)
-}
-# ToDo: Checking if the item is already inside the file. duplicates.
-ns () {
-    echo $1 >> ~/.tmp/items-nvim.txt
-}
-
-# cat DELETEME | while IFS= read -r filename; do open "$filename"; done
-# cat $1 | while IFS= read -r filename; do open "$filename"; done
-#
 
 alias web=/Users/dominikocsofszki/.local/bin/awrit
 
@@ -32,6 +20,7 @@ deepl () {
 
 ## Saving files with .my ending => loading all entries of each .my file on the system.
 ## Using it for important lecture links
+export MY=$HOME/.cache/MY/my_cache.mycache
 myupdate () {
     echo 'updating /.cache/MY/my_cache.mycache'
     MY=$HOME/.cache/MY/my_cache.mycache
@@ -82,3 +71,28 @@ __pdfopenintonvim () {
    echo \"$@\" 
 }
 
+go () {
+    open "http://google.com/search?q=$(echo \"$@\" | sd ' ' '+' | sd '"' '')"
+}
+
+Alias () {
+    alias | fzf | col | gcut -s -f 1 -d '=' | sd ' ' ''
+
+}
+
+
+linksFrom () {
+    cat $1 | grep -o 'href="[^"]*"' | grep -o '"[^"]*"' | grep http | gcut -d '"' -f 2
+}
+
+allLinksFrom () {
+    for  arg in $* 
+    do
+        linksFrom $arg
+    done
+
+}
+
+openAllEntries () {
+    cat $1 | while IFS= read -r filename; do open "$filename"; done
+}

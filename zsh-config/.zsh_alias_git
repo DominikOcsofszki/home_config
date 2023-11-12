@@ -1,0 +1,8 @@
+alias gm="git checkout main"
+alias g-="git checkout -"
+
+
+
+gnew() {
+		git branch $1 && git checkout $1
+}
