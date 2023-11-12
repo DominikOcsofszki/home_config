@@ -1,4 +1,3 @@
-source $ZSH_CONFIG/zsh_plugins/git/git.plugin.zsh
 source $ZSH_CONFIG/zsh_plugins/z/z.plugin.zsh
 source $ZSH_CONFIG/zsh_plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZSH_CONFIG/zsh_plugins/fzf-tab/fzf-tab.zsh
