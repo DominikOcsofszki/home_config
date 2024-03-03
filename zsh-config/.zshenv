@@ -22,3 +22,4 @@ export VISUAL='nvim'
 export EDITOR='nvim' 
 export NNN_OPENER=nuke
 export DOCKER_HOST="unix://$HOME/.colima/docker.sock"
+source $ZSH_CONFIG/zsh_new
