@@ -17,15 +17,22 @@ export PATH="$HOME/Dev/Installs/apache-maven-3.9.4/bin:$PATH"
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export PATH="$HOME/.npm-global/bin:$PATH"
 # source $ZSH_CONFIG/.newtest
-export PATH=$HOME/.npm-global/bin:/opt/homebrew/opt/openjdk/bin:$HOME/Dev/Installs/apache-maven-3.9.4/bin:$HOME/.bun/bin:$HOME/Dev/FlutterDev/flutter/bin:$HOME/.pub-cach/bin:/opt/homebrew/bin:/opt/homebrew/sbin:$HOME/.npm-global/bin:/opt/homebrew/opt/openjdk/bin:$HOME/Dev/Installs/apache-maven-3.9.4/bin:$HOME/.bun/bin:$HOME/Dev/FlutterDev/flutter/bin:$HOME/.pub-cach/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/Library/TeX/texbin:/opt/homebrew/bin:/opt/homebrew/sbin:/Applications/kitty.app/Contents/MacOS:/opt/homebrew/opt/fzf/bin:$HOME/.local/bin
+export PATH=:$PATH:$HOME/.npm-global/bin:/opt/homebrew/opt/openjdk/bin:$HOME/Dev/Installs/apache-maven-3.9.4/bin:$HOME/.bun/bin:$HOME/Dev/FlutterDev/flutter/bin:$HOME/.pub-cach/bin:/opt/homebrew/bin:/opt/homebrew/sbin:$HOME/.npm-global/bin:/opt/homebrew/opt/openjdk/bin:$HOME/Dev/Installs/apache-maven-3.9.4/bin:$HOME/.bun/bin:$HOME/Dev/FlutterDev/flutter/bin:$HOME/.pub-cach/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/Library/TeX/texbin:/opt/homebrew/bin:/opt/homebrew/sbin:/Applications/kitty.app/Contents/MacOS:/opt/homebrew/opt/fzf/bin:$HOME/.local/bin
 export M2_HOME=/opt/homebrew/Cellar/maven
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
+# Adding neovim newst version to begin of bin
+
+
 source $ZSH_CONFIG/zsh_source_all
+source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+export PATH="$HOME/Dev/nvim/nvim-macos/bin:$PATH"
 # source zsh_plugins/source_plugins
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
-autoload -U compinit && compinit
+# autoload -U compinit && compinit
 
+
+# PATH=~/.console-ninja/.bin:$PATH

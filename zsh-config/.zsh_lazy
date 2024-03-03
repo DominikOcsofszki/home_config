@@ -1,2 +1,7 @@
 alias ..="cd .."
 alias la="ls -la"
+alias obsidian='"cd /Users/dominikocsofszki/Library/Mobile Documents/iCloud~md~obsidian/Documents"'
+alias l1="ls -1"
+alias nv="fd Session.vim |fzf| xargs nvim -S"
+alias vs="fd Session.vim ~/VSCODE |fzf --layout reverse| xargs nvim -S"
+# alias og="fd --hidden .git$ ~/VSCODE |fzf --layout reverse| xargs nvim -c ''"

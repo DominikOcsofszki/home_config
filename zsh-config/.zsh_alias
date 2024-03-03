@@ -1,14 +1,15 @@
 alias n='nvim'
-alias N='nvim .'
-alias nn="nvim $XDG_CONFIG_HOME/nvim/"
-alias nk="nvim $HOME_CONFIG/kitty/"
-alias nc="nvim $HOME_CONFIG/zsh-config/"
+alias e='nvim'
+# alias N='nvim .'
+alias nn="cd $XDG_CONFIG_HOME/nvim/ && nvim "
+alias nk="cd $HOME_CONFIG/kitty/ && nvim ."
+alias nc="cd $HOME_CONFIG/zsh-config/ && nvim ."
 
 alias vim=nvim
 alias skima=/Applications/Skim/Skim.app/Contents/MacOS/Skim 
 alias serv="$HOME/.npm-global/bin/live-server --port=8989"
-alias umlp="~/.npm-global/bin/water-uml live --live-port 8989"
-alias uml="~/.npm-global/bin/water-uml export"
+# alias umlp="~/.npm-global/bin/water-uml live --live-port 8989"
+# alias uml="~/.npm-global/bin/water-uml export"
 alias cloud="$HOME/Library/Mobile\ Documents/com~apple~CloudDocs/"
 # alias cloud='"$HOME/Library/Mobile Documents/com~apple~CloudDocs/"'
 alias startMongo="brew services start mongodb/brew/mongodb-community"
@@ -22,6 +23,7 @@ source $ZSH_CONFIG/.zsh_alias2
 source $ZSH_CONFIG/.zsh_alias_uni
 
 alias pn="NVIM_APPNAME=nvim_styles/\$(ls \$XDG_CONFIG_HOME/nvim_styles/ | fzf) nvim"
-alias mn="NVIM_APPNAME=nvim_styles/nvim_mine nvim"
-alias "m"="NVIM_APPNAME=nvim_styles/nvim_mine nvim "
-alias mc="m $HOME/.config/nvim_styles/nvim_mine" 
+# alias mn="NVIM_APPNAME=nvim_styles/nvim_mine nvim"
+# alias np="NVIM_APPNAME=nvim_styles/NvChad nvim"
+# alias mn="NVIM_APPNAME=nvim_styles/nvim_2024 nvim"
+# alias mc="m $HOME/.config/nvim_styles/nvim_mine" 

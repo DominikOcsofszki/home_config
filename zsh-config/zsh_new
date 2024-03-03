@@ -1,0 +1,15 @@
+alias tmconf='tmux new-session -A -s conf'
+alias tmpy='tmux new-session -A -s python'
+alias tm='tmux new-session -A -s misc'
+alias tn='tmux new-session -A -s nvim'
+
+alias nn="cd $HOME/.config/nvim/lua/ && nvim ."
+alias nt="cd $HOME && nvim $HOME/.tmux.conf"
+alias vim="nvim"
+
+alias show_keys='jq -r '\''paths(scalars) | map(if type == "number" then "[\(. | tostring)]" else "." + tostring end) | join("")'\'''
+
+show_jq(){
+    cat $1 | jq $(cat $1 | show_keys | fzf)
+}
+

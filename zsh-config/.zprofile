@@ -1,5 +1,5 @@
 # Set PATH, MANPATH, etc., for Homebrew.
-eval "$(/opt/homebrew/bin/brew shellenv)"
+# eval "$(/opt/homebrew/bin/brew shellenv)"
 
 export LANG=en_US.UTF-8
 
@@ -29,7 +29,6 @@ allLinksFrom () {
 openAllEntries () {
     cat $1 | while IFS= read -r filename; do open "$filename"; done
 }
-
 
 
 # alias fzpdf="fd .pdf$ . | fzf  --preview-window 'right:60%' --preview ' pdftotext -layout -f 1  {} -'"

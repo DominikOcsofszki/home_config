@@ -1,8 +1,21 @@
 alias gm="git checkout main"
 alias g-="git checkout -"
-
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
 
 
 gnew() {
 		git branch $1 && git checkout $1
 }
+
+countGitAuthor(){
+	git ls-files | while read f; do git blame -w -M -C -C --line-porcelain "$f" | grep -I '^author '; done | sort -f | uniq -ic | sort -n
+}
+
+alias fdg="fd -gu .git ~/VSCODE |sd '.git/' ''| fzf | xargs nvim "
+# alias fdg="cd $(fd -gu .git ~/VSCODE |sd '/.git.' '/'|sd '/Users/dominikocsofszki/''~/')"
+# opg() {
+#      fdg=fd -gu .git ~/VSCODE |sd '.git/' ''| fzf | xargs echo 
+#     cd $(fdg)    
+# }

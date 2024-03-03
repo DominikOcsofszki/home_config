@@ -21,4 +21,4 @@ export NNN_FIFO='/tmp/nnn.fifo'
 export VISUAL='nvim' 
 export EDITOR='nvim' 
 export NNN_OPENER=nuke
-
+export DOCKER_HOST="unix://$HOME/.colima/docker.sock"

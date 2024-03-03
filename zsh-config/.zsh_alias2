@@ -12,10 +12,12 @@ alias sA="alias | nvim -R  -"
 alias Ali="alias | fzf | col  | gcut -s -f 2- -d '=' | sd ' ' ''|xargs echo"
 alias Ali="alias | fzf  | gcut  -f 2- -d '=' | cat  " 
 alias fAli="Ali | gcut -c 1- | rev"
+alias pt="zsh /Users/dominikocsofszki/.config/alacritty/script_themes.sh"
 
 
 alias showdownloads='ls $HOME/Downloads/| fzf --preview "cat $HOME/Downloads/{}"'
 alias  cphere='cp $HOME/Downloads/"$(ls $HOME/Downloads/| fzf)" $(pwd)'  
 alias docker-start-colima='colima start'
 alias h='history'
+alias python=python3
 

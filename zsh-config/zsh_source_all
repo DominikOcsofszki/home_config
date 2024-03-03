@@ -8,3 +8,9 @@ source $ZSH_CONFIG/.zsh_alias2
 source $ZSH_CONFIG/.zsh_alias_uni
 source $ZSH_CONFIG/.zsh_lazy
 source $ZSH_CONFIG/source_plugins
+
+
+
+# one of the latest
+source $ZSH_CONFIG/more_paths
+source $ZSH_CONFIG/zsh_new

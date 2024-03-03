@@ -8,3 +8,15 @@ alias webProjekt="cd $HOME/Downloads/germany/code/WebEng/Projekt"
 
 alias jirash='cd "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Uni/SE2/jira/sh"'
 alias intelij='open -na "IntelliJ IDEA.app"'
+alias og='nvim -c ":Telescope projects"'
+# alias og="nvim -l /Users/dominikocsofszki/.config/nvim/lua/lsp/startup.lua"
+# alias nvim_projects='<cmd>lua require"telescope".extensions.projects.projects{}<cr>'
+#
+# openNvimWithCommand() {
+#     nvim_projects='<cmd>lua require"telescope".extensions.projects.projects{}<cr>'
+#     export nvim_projects
+#     echo `$nvim_projects`
+#     # nvim -c `$nvim_projects`
+# }
+#
+# # alias og="openNvimWithCommand $(nvim_projects)"
